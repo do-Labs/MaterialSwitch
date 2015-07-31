@@ -1,0 +1,43 @@
+md-toast.md-error-theme {
+    background-color: rgb(244, 67, 54);
+}
+
+.device-list md-button {
+
+}
+
+.device-list md-grid-list {
+    margin: 8px;
+}
+
+.device-list .md-button.md-icon-button {
+    margin: 0;
+}
+
+.device-list md-grid-tile md-grid-tile-footer md-icon{
+    color: white;
+}
+
+.device-list md-grid-tile {
+    transition: all 300ms ease-out 50ms;
+    background: #f5f5f5;
+}
+
+.device-list md-grid-tile .md-button.md-fab {
+    margin-bottom: 42px;
+    width: 50%;
+    height: 50%;
+}
+
+.device-list md-grid-tile md-grid-tile-footer {
+    background: rgba(0, 0, 0, 0.68);
+    height: 42px;
+}
+
+.device-list md-grid-tile-footer figcaption {
+    width: 100%;
+}
+
+.device-list md-grid-tile-footer figcaption h3 {
+    font-weight: bold;
+}

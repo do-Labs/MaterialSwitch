@@ -1,0 +1,69 @@
+<md-toolbar>
+  <div class="md-toolbar-tools">
+    <h1>MaterialSwitch</h1>
+    <span flex></span>
+    <md-button ng-click="addNew()" class="md-icon-button" aria-label="Add new device">
+      <md-icon md-font-library="material-icons">add</md-icon>
+    </md-button>
+  </div>
+</md-toolbar>
+<section layout="row" flex>
+  <md-content flex layout-padding class="device-list">
+    <md-grid-list
+        md-cols-sm="2" md-cols-md="3" md-cols-gt-md="4"
+        md-row-height="1:1" md-gutter="12px" md-gutter-gt-sm="8px">
+      <md-grid-tile ng-repeat="device in devices">
+        <md-button ng-click="toggleDeviceState(device)"
+                   class="md-fab" ng-class="device.isOn ? 'md-warn' : 'md-primary'" aria-label="Save">
+          <md-icon md-font-library="material-icons">power_settings_new</md-icon>
+        </md-button>
+        <md-grid-tile-footer class="device-footer">
+          <div layout="row" layout-align="space-between center">
+            <h3>{{device.name}}</h3>
+            <md-button class="md-icon-button" ng-click="selectDevice(device)" aria-label="Edit">
+              <md-icon md-font-library="material-icons">settings</md-icon>
+            </md-button>
+          </div>
+        </md-grid-tile-footer>
+      </md-grid-tile>
+    </md-grid-list>
+  </md-content>
+  <md-sidenav class="md-sidenav-right md-whiteframe-z2" md-component-id="device">
+    <div class="container">
+      <md-toolbar class="md-accent">
+        <div class="md-toolbar-tools">
+          <h1 class="md-toolbar-tools">{{selectedDevice._id ? 'Edit Device': 'Add Device'}}</h1>
+          <span flex></span>
+          <md-button ng-click="deselectDevice()" class="md-icon-button" aria-label="Close">
+            <md-icon md-font-library="material-icons">close</md-icon>
+          </md-button>
+        </div>
+      </md-toolbar>
+      <md-content layout-padding>
+        <form name="deviceForm">
+          <md-input-container flex>
+            <label for="name">Device Name</label>
+            <input ng-model="selectedDevice.name" id="name" type="text" required>
+          </md-input-container>
+          <md-input-container flex>
+            <label for="group">Group (1-3)</label>
+            <input ng-model="selectedDevice.group" id="group" type="number" required min="1" max="3">
+          </md-input-container>
+          <md-input-container flex>
+            <label for="device">Device (1-4)</label>
+            <input ng-model="selectedDevice.device" id="device" type="number" required min="1" max="4">
+          </md-input-container>
+          <div layout="row" layout-align="space-around center">
+            <md-button ng-click="removeDevice(selectedDevice)"
+                       class="md-fab md-warn" ng-disabled="!selectedDevice._id" aria-label="Save">
+              <md-icon md-font-library="material-icons">delete</md-icon>
+            </md-button>
+            <md-button ng-click="saveDevice(selectedDevice)" class="md-fab md-primary" aria-label="Save">
+              <md-icon md-font-library="material-icons">save</md-icon>
+            </md-button>
+          </div>
+        </form>
+      </md-content>
+    </div>
+  </md-sidenav>
+</section>

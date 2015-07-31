@@ -1,0 +1,48 @@
+{
+  "generator-angular-arduino": {
+    "insertRoutes": true,
+    "registerRoutesFile": "server/server.ino",
+    "routesNeedle": "// other routers",
+    "routesBase": "/api/",
+    "pluralizeRoutes": true,
+    "filters": {
+      "babel": false,
+      "js": true,
+      "html": true,
+      "css": true,
+      "ngroute": true,
+      "bootstrap": false,
+      "uibootstrap": false
+    },
+    "package": "esp8266",
+    "arch": "esp8266",
+    "board": "esp8266",
+    "serialPort": "/dev/cu.usbserial-DA00RNTV",
+    "idePath": "/Applications/Arduino.app/Contents/MacOS/arduino"
+  },
+  "generator-ng-component": {
+    "routeDirectory": "client/app/",
+    "directiveDirectory": "client/app/",
+    "filterDirectory": "client/app/",
+    "serviceDirectory": "client/app/",
+    "basePath": "client",
+    "moduleName": "",
+    "filters": [
+      "ngroute"
+    ],
+    "extensions": [
+      "js",
+      "html",
+      "css"
+    ],
+    "directiveSimpleTemplates": "",
+    "directiveComplexTemplates": "",
+    "filterTemplates": "",
+    "serviceTemplates": "",
+    "factoryTemplates": "",
+    "controllerTemplates": "",
+    "decoratorTemplates": "",
+    "providerTemplates": "",
+    "routeTemplates": ""
+  }
+}
