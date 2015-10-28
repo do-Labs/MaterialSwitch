@@ -16,8 +16,6 @@ This project was generated using the [AngularJS Arduino generator](https://githu
 * [EepromStream](https://github.com/lasselukkari/EepromStream)
 * [MemoryStore](https://github.com/lasselukkari/MemoryStore)
 
-aJson doesn't currently support ESP8266 out of the box. You need to change one line of code described [here](https://github.com/interactive-matter/aJson/pull/72/files).
-
 ## Usage:
 Install bower and npm dependencies and edit the serial port name in the Gruntfile and build and upload using the `grunt` command. 
 
