@@ -2,12 +2,12 @@
 
 MaterialSwitch is a demo fullstack web application for the ESP8266.
 
-<img src="http://www.awot.net/materialswitch/material_switch_ui.gif" alt="MaterialSwitch UI" width="360px">
+<img src="https://s3-us-west-2.amazonaws.com/www.awot.net/materialswitch/material_switch_ui.gif" alt="MaterialSwitch UI" width="360px">
 
 This project was generated using the [AngularJS Arduino generator](https://github.com/lasselukkari/generator-angular-arduino)
 
 ## Hardware
-<img src="http://www.awot.net/materialswitch/material_switch_hardware.jpg" alt="MaterialSwitch HardWare">
+<img src="https://s3-us-west-2.amazonaws.com/www.awot.net/materialswitch/material_switch_hardware.jpg" alt="MaterialSwitch HardWare">
 
 ## Required Arduino libraries:
 * [rc-switch](https://github.com/sui77/rc-switch)
